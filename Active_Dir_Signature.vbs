@@ -16,7 +16,7 @@ strPOBox = objUser.PostOfficeBox
 strCity = objUser.l
 strCountry = objUser.co
 strMail = objuser.mail ' get  user Email form Active Dir
-strHyperlink = "www.alwataniya.sy" ' add website
+	strHyperlink = "www.yourwebsite.com" ' add website
 
 Set objWord = CreateObject("Word.Application")
 objWord.FontNames.Item = "Arial"
@@ -44,7 +44,7 @@ objTable.Cell(2,1).Range.Text = strTitle
 objTable.Cell(3,1).Range.Text= strCompany
 objTable.Cell(4,1).Range.Text = "_________________________________________________"  
 objTable.Cell(4,2).Range.Text ="" 
-objTable.Cell(6,2).Range.InlineShapes.AddPicture("Y:\alwataniya_sig\alwataniya_logo.png")
+objTable.Cell(6,2).Range.InlineShapes.AddPicture("path/to/logo")
 objTable.Cell(6,2).SetHeight= 70
 objTable.Cell(6,2).SetWidth= 70
 objTable.Cell(5,1).Range.Text = "P.O.Box: "  & strPOBox
@@ -138,8 +138,8 @@ Set objSelection = objDoc.Range()
 '\\\\\\\\\\\\\\\////////////////////
 
 '\\\\\\\\\\\\\\\//////////////////
-objSignatureEntries.Add "Al Wataniya Auto Signature", objSelection
-objSignatureObject.NewMessageSignature = "Al Wataniya Auto Signature"
-objSignatureObject.ReplyMessageSignature = "Al Wataniya Auto Signature"
+objSignatureEntries.Add "Your Signature Name as Ali Mhanna Sig", objSelection
+objSignatureObject.NewMessageSignature = "Your Signature Name as Ali Mhanna Sig"
+objSignatureObject.ReplyMessageSignature = "Your Signature Name as Ali Mhanna Sig"
 objDoc.Saved = True
 objWord.Quit
